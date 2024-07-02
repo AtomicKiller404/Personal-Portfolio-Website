@@ -1,0 +1,163 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: #060707; /* Optional: Background color for the body */
+    color: white;
+}
+
+.menu{
+    display: flex;
+    margin-left: 20px;
+    width: 180vh;
+    height: 79px;
+    border-radius: 20px;
+    border: 3px solid #ffffff;
+}
+
+.menu .home-page{
+    margin-left: 20px;
+    margin-top: 10px;
+    width: 102px;
+    height: 56px;
+    border-radius: 20px;
+    background-color: #ffffff;
+}
+
+.menu .about-me-page,
+.menu .projects-page,
+.menu .skills-page,
+.menu .experience-page,
+.menu .contact-page {
+    margin-top: 10px;
+    width: 288px;
+    height: 56px;
+    border-radius: 20px;
+    /* background-image: linear-gradient(0deg, white 0%, rgba(255,255,255,0) 100%); */
+    background-color: rgba(255,255,255,0);
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    /* Adjust margin-left if necessary */
+    margin-left: 57px;
+}
+
+
+.circles{
+    position: fixed; /* Fix the circle in place */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the circle */
+}
+
+/* Style for the gradient circle */
+.gradient-circle {
+    position: fixed; /* Fix the circle in place */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the circle */
+    width: 120vh; /* Set the width to 100% of the viewport height */
+    height: 120vh; /* Set the height to 100% of the viewport height */
+    background: radial-gradient(closest-side, #038C7F, #060707); /* Gradient colors */
+    border-radius: 50%;
+    display: flex; /* Use flexbox to center the inner circle */
+    justify-content: center;
+    align-items: center;
+    z-index: -1; /* Place the circle behind other content */
+}
+
+/* Style for the inner circle */
+.inner-circle {
+    width: 20%; /* Adjust the size of the inner circle as needed */
+    height: 20%;
+    /* background: radial-gradient(closest-side, #038C7F 70%, white 90%); Gradient colors */
+    background-image: radial-gradient(circle at center, rgba(255,255,255,0) 15%, white 85%);
+    border-radius: 50%;
+}
+
+.intro {
+    position: fixed;   
+    width: 42.4%; 
+    transform: translate(5%, 55%); /* Center the circle */
+    /* border-style: solid;
+    border-color: red; */
+}
+
+.intro .inner-1 {
+    width: 80%;
+    margin-left: 10%;
+    font-size: 11vh;
+    color: #ffffff;
+    font-weight: 700;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-weight: 500;
+    /* border-style: solid;
+    border-color: blue; */
+}
+
+.intro .inner-1 spam{
+    color: #89D1D9;
+    font-weight: 900;
+}
+
+.intro .inner-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: #ffffff;
+    font-weight: 200;
+    font-weight: 100;
+    /* border-style: solid;
+    border-color: green; */
+}
+
+.skills {
+    position: fixed;   
+    width: 34.3%; 
+    transform: translate(186%, 100%);
+    /* border-style: solid;
+    border-color: red; */
+}
+
+.skills .inner-1 {
+    width: 83%;
+    margin-left: 10%;
+    margin-bottom: 50px;
+    font-size: 45px;
+    color: #ffffff;
+    font-weight: 400;
+    text-align: center;
+    /* border-style: solid;
+    border-color: blue; */
+}
+
+.skills .inner-2 {
+    font-size: 65px;
+    color: #ffffff;
+    font-weight: 400;
+    text-align: center;
+    /* border-style: solid;
+    border-color: green; */
+}
+
+.btn-about{
+    position: fixed;   
+    transform: translate(435%, 800%);
+    width: 347px;
+    height: 99px;
+    border-radius: 27px;
+    background-color: rgba(255,255,255,0);
+    border: 4px solid #ffffff;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+}
