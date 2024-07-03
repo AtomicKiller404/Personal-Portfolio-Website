@@ -1,31 +1,69 @@
 body, html {
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    font-family:Arial, Helvetica, sans-serif;
+    /* overflow: hidden; */
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-body{
+body {
     background-color: #060707; /* Optional: Background color for the body */
     color: white;
 }
 
-.menu{
+.crosshair {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+}
+
+.crosshair::before, .crosshair::after {
+    content: '';
+    position: absolute;
+    background-color: red; /* Change to your desired color */
+}
+
+.crosshair::before {
+    width: 2px; /* Width of the vertical line */
+    height: 100vh; /* Full viewport height */
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.crosshair::after {
+    height: 2px; /* Height of the horizontal line */
+    width: 100vw; /* Full viewport width */
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.menu {
+    position: fixed;
     display: flex;
-    margin-left: 20px;
-    width: 180vh;
-    height: 79px;
+    top: 2vh;
+    left: 2vh;
+    width: 97.5vw;
+    height: 7.5vh;
     border-radius: 20px;
     border: 3px solid #ffffff;
 }
 
-.menu .home-page{
-    margin-left: 20px;
-    margin-top: 10px;
-    width: 102px;
-    height: 56px;
+.menu .home-page {
+    margin-left: 2vh;
+    margin-top: 1vh;
+    width: 5.5vw;
+    height: 5.45vh;
     border-radius: 20px;
     background-color: #ffffff;
+}
+
+.bi.bi-house-fill {
+    width: 3vw; 
+    height: 3vh;
 }
 
 .menu .about-me-page,
@@ -33,23 +71,32 @@ body{
 .menu .skills-page,
 .menu .experience-page,
 .menu .contact-page {
-    margin-top: 10px;
-    width: 288px;
-    height: 56px;
+    margin-top: 1vh;
+    width: 15vw;
+    height: 5.45vh;
     border-radius: 20px;
-    /* background-image: linear-gradient(0deg, white 0%, rgba(255,255,255,0) 100%); */
     background-color: rgba(255,255,255,0);
     border: 1px solid #ffffff;
     color: #ffffff;
-    font-size: 20px;
+    font-size: 2.0vh;
     font-weight: 400;
     text-align: center;
-    /* Adjust margin-left if necessary */
-    margin-left: 57px;
+    margin-left: 2.9vw;
+    /* margin-left: 57px; */
+}
+
+.menu .about-me-page:hover,
+.menu .projects-page:hover,
+.menu .skills-page:hover,
+.menu .experience-page:hover,
+.menu .contact-page:hover {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid transparent;
+    color: #000000;
 }
 
 
-.circles{
+.circles {
     position: fixed; /* Fix the circle in place */
     top: 50%;
     left: 50%;
@@ -76,88 +123,116 @@ body{
 .inner-circle {
     width: 20%; /* Adjust the size of the inner circle as needed */
     height: 20%;
-    /* background: radial-gradient(closest-side, #038C7F 70%, white 90%); Gradient colors */
     background-image: radial-gradient(circle at center, rgba(255,255,255,0) 15%, white 85%);
     border-radius: 50%;
 }
 
 .intro {
-    position: fixed;   
-    width: 42.4%; 
-    transform: translate(5%, 55%); /* Center the circle */
-    /* border-style: solid;
-    border-color: red; */
+    position: fixed;
+    width: 42.4vw;
+    height: auto;
+    top: 50%; 
+    left: 3%; 
+    transform: translateY(-42.4%); 
+    /* border: red solid; */
 }
 
 .intro .inner-1 {
-    width: 80%;
-    margin-left: 10%;
-    font-size: 11vh;
+    width: 27.2vw;
+    margin-left: 8vw;
+    font-size: 10vh;
     color: #ffffff;
-    font-weight: 700;
-    font-family:Arial, Helvetica, sans-serif;
-    text-align: center;
     font-weight: 500;
-    /* border-style: solid;
-    border-color: blue; */
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    /* border: blue solid; */
 }
 
-.intro .inner-1 spam{
-    color: #89D1D9;
+.intro .inner-1 span {
+    color: #D9A78B;
     font-weight: 900;
 }
 
 .intro .inner-2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
+    font-size: 2.88vh;
     color: #ffffff;
-    font-weight: 200;
     font-weight: 100;
-    /* border-style: solid;
-    border-color: green; */
 }
 
 .skills {
-    position: fixed;   
-    width: 34.3%; 
-    transform: translate(186%, 100%);
-    /* border-style: solid;
-    border-color: red; */
+    position: fixed;
+    width: 34.3vw;
+    top: 50%; 
+    right: 3%; 
+    transform: translateY(-42.5%);
+    /* border: red solid 2px;  */
 }
 
 .skills .inner-1 {
     width: 83%;
-    margin-left: 10%;
-    margin-bottom: 50px;
-    font-size: 45px;
+    height: auto;
+    margin-left: 3vw;
+    margin-bottom: 5vh;
+    font-size: 4.33vh;
     color: #ffffff;
     font-weight: 400;
     text-align: center;
-    /* border-style: solid;
-    border-color: blue; */
+    /* border: blue solid; */
 }
 
 .skills .inner-2 {
-    font-size: 65px;
+    font-size: 6.44vh;
     color: #ffffff;
     font-weight: 400;
     text-align: center;
-    /* border-style: solid;
-    border-color: green; */
 }
 
-.btn-about{
-    position: fixed;   
-    transform: translate(435%, 800%);
-    width: 347px;
-    height: 99px;
+.btn-about {
+    position: fixed;
+    bottom: 3%; 
+    right: 3%; 
+    transform: translateY(-40%);
+    width: 18vw;
+    height: 9.5vh;
     border-radius: 27px;
     background-color: rgba(255,255,255,0);
-    border: 4px solid #ffffff;
+    border: 3px solid #ffffff;
     color: #ffffff;
-    font-size: 20px;
+    font-size: 2.0vh;
     font-weight: 400;
     text-align: center;
+}
+
+.btn-about:hover {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid transparent;
+    color: #000000;
+}
+
+.particles {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.particle {
+    position: absolute;
+    width: 10px; /* Size of the particle */
+    height: 10px; /* Size of the particle */
+    background-color: #ffffff; /* Color of the particle */
+    border-radius: 50%; /* Make it round */
+    animation: float 5s infinite linear; /* Apply animation */
+}
+
+/* Animation keyframes for floating effect */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
